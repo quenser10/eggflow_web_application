@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('sales', function (Blueprint $table) {
             $table->id();
             $table->string('sold_egg');
-            $table->string('egg_size');
+            $table->string('size');
             $table->string('customer');
+            $table->foreignId('seller')->constrained('users');
             $table->timestamps();
         });
     }

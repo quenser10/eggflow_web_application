@@ -18,7 +18,7 @@ class Sales extends Model
         'quantity',
         'size',
         'customer',
-        'user_id',
+        'user',
         
     ];
 }
