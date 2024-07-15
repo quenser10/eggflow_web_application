@@ -14,6 +14,16 @@ class EggsResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return 
+        [
+            "id" => (string)$this->id,
+            "attributes" => 
+            [
+                "quantity" => (string)$this->quantity,
+                "size" => (string)$this->size,
+                "user" => (string)$this->user,
+                
+            ]
+        ];
     }
 }
